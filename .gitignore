@@ -1,0 +1,7 @@
+training_results
+data
+epochs_vgg19
+epochs_2022-04-21 00:01:03
+.vscode
+__pycache__
+pytorch_ssim

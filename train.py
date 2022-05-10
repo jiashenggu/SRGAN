@@ -54,8 +54,8 @@ if __name__ == '__main__':
         netD.cuda()
         generator_criterion.cuda()
     
-    optimizerG = optim.Adam(netG.parameters())
-    optimizerD = optim.Adam(netD.parameters())
+    optimizerG = optim.Adam(netG.parameters(), lr=1e-4)
+    optimizerD = optim.Adam(netD.parameters(), lr=1e-4)
     if opt.netG_name and opt.netD_name:
         netG.load_state_dict(torch.load('epochs/' + opt.netG_name))
         netD.load_state_dict(torch.load('epochs/' + opt.netD_name))
@@ -186,4 +186,4 @@ if __name__ == '__main__':
                 data={'Loss_D': results['d_loss'], 'Loss_G': results['g_loss'], 'Score_D': results['d_score'],
                       'Score_G': results['g_score'], 'PSNR': results['psnr'], 'SSIM': results['ssim']},
                 index=range(start_epoch+1, epoch + 1))
-            data_frame.to_csv(statistic_path + 'srf_' + str(UPSCALE_FACTOR) + opt.exp_name + '_' + 'train_results.csv', index_label='Epoch')
+            data_frame.to_csv(statistic_path + 'srf_' + str(UPSCALE_FACTOR) + '_' + opt.exp_name + '_' + 'train_results.csv', index_label='Epoch')
