@@ -1,7 +1,9 @@
-training_results
+
+testing_results
 data
-epochs_vgg19
-epochs_2022-04-21 00:01:03
+epochs_VGG19
+epochs_MDFloss
+epochs_cv*
 .vscode
 __pycache__
 pytorch_ssim
