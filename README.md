@@ -10,7 +10,7 @@ conda install pytorch torchvision -c pytorch
 ```
 - opencv
 ```
-conda install opencv
+conda install opencv pandas matplotlib
 ```
 
 ## Datasets
@@ -24,7 +24,32 @@ Train dataset has 600 images and Val dataset has 200 images.
 The test image dataset are sampled from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/).
 Test dataset has 100 images.
 
+## MDFloss
+### MDFloss.py
+MDFloss implementation.
 
+### SinGAN
+MDFloss is trained based n SinGAN architecture.
+
+### Ds_SISR.pth
+Weight of MDFloss for SISR.
+
+## testing_results
+
+Comparison between bicubic, original and super-resolution images.
+
+## data_utils.py
+
+Implementaion of dataset, dataloader
+
+### PIL.ipynb
+Test data_utils.
+
+## metrics.ipynb
+Plot metrics, PSNR, SSIM
+
+## architecture_visualization.ipynb
+Visualize model architecture by netron in onnx format.
 
 ## Usage
 
